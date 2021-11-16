@@ -3,7 +3,7 @@
 </div>
 
 <div [formGroup]="form">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="result()" style="float: right;margin-right: 33px;margin-top: 50px;">
+<button type="button" class="btn btn-primary btn-color" data-toggle="modal" data-target="#exampleModal"   [disabled]="!enable">
 Submit
 </button>
 
@@ -46,7 +46,7 @@ Submit
         <div>
           <label class="col-xs col-form-label lab-qty">Qty</label>
           
-          <input  class=" form-control qty" type="text" formControlName="Qty1">
+          <input  class=" form-control qty" type="text" formControlName="Qty1" (change)="result()">
         
         </div>
         <div>
@@ -70,7 +70,7 @@ Submit
         </div>
         <div>
           <label class="col-xs col-form-label lab-qty"> Qty</label>
-          <input  class="form-control qty"  type="text" formControlName="Qty2">
+          <input  class="form-control qty"  type="text" formControlName="Qty2" (change)="result()">
         </div>
         <div>
           <label class="col-xs col-form-label cat"  >category</label>
@@ -92,7 +92,7 @@ Submit
       </div>
       <div>
         <label  class="col-xs col-form-label lab-qty"> Qty</label>
-        <input  class="form-control qty"  type="text" formControlName="Qty3">
+        <input  class="form-control qty"  type="text" formControlName="Qty3" (change)="result()">
       </div>
       <div>
         <label class="col-xs col-form-label cat" >category</label>
@@ -113,7 +113,7 @@ Submit
         </div>
         <div>
           <label   class="col-xs col-form-label lab-qty" > Qty</label>
-          <input  class="form-control qty"  type="text" formControlName="Qty4">
+          <input  class="form-control qty"  type="text" formControlName="Qty4" (change)="result()">
         </div>
         <div>
           <label class="col-xs col-form-label cat" >category</label>

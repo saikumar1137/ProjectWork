@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   makedis2:boolean=false;
   makedis3:boolean=false;
   makedis4:boolean=false;
+  enable:boolean=false;
 valuearr:any=[];
 namesarr:any=[];
 constructor(private fb: FormBuilder){
@@ -29,12 +30,15 @@ ngOnInit():void{
 this.namesarr.push(data[0].p_name,data[1].p_name,data[1].p_name,data[2].p_name);
 console.log(this.namesarr);
 this.valuearr.push(data[0].p_cost,data[1].p_cost,data[2].p_cost,data[3].p_cost);
-console.log(this.valuearr);
+console.log(this.valuearr);console.log(this.makedis);
+
 
 }
 result(){
   if(this.form.value.Qty1!=''){
     this.makedis=true;
+    console.log(this.makedis);
+    
     }
     if(this.form.value.Qty2!=''){
       this.makedis2=true;
@@ -45,7 +49,9 @@ result(){
         if(this.form.value.Qty4!=''){
           this.makedis4=true;
           }
-}
+          if(this.makedis==true||this.makedis2==true||this.makedis3==true||this.makedis4==true){
+this.enable=true;
+}}
 change(){
   this.form.reset();
 
