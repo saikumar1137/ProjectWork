@@ -27,7 +27,7 @@ constructor(private fb: FormBuilder){
 }
 ngOnInit():void{
 
-this.namesarr.push(data[0].p_name,data[1].p_name,data[1].p_name,data[2].p_name);
+this.namesarr.push(data[0].p_name,data[1].p_name,data[2].p_name,data[3].p_name);
 console.log(this.namesarr);
 this.valuearr.push(data[0].p_cost,data[1].p_cost,data[2].p_cost,data[3].p_cost);
 console.log(this.valuearr);console.log(this.makedis);
